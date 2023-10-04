@@ -29,3 +29,17 @@ for (let i = 0; i < btnOpenModal.length; i++) {
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
+
+//  how to response keyboard in event.????????
+document.addEventListener('keydown', (e)=>{
+    console.log(e);
+    // output:
+    // KeyboardEvent {isTrusted: true, key: 'Enter', code: 'KeyD', location: 0, ctrlKey: false, …}
+    console.log(e.key);
+    if(e.key==='Escape'){
+        if( ! modal.classList.contains('hidden')){
+          closeModal();
+        }
+    }
+
+})
