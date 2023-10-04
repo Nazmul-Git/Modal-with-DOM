@@ -16,13 +16,16 @@ const closeModal = () => {
   //   overlay.style.display='block';
 };
 
-for (let i = 0; i < btnOpenModal.length; i++) {
-  btnOpenModal[i].addEventListener('click', () => {
+const openModal=()=> {
     // console.log(btnOpenModal[i].textContent);
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
-  });
+  }
+
+for (let i = 0; i < btnOpenModal.length; i++) {
+  btnOpenModal[i].addEventListener('click', openModal);
 }
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
