@@ -36,10 +36,8 @@ document.addEventListener('keydown', (e)=>{
     // output:
     // KeyboardEvent {isTrusted: true, key: 'Enter', code: 'KeyD', location: 0, ctrlKey: false, …}
     console.log(e.key);
-    if(e.key==='Escape'){
-        if( ! modal.classList.contains('hidden')){
+    if(e.key==='Escape' && !modal.classList.contains('hidden')){
           closeModal();
-        }
     }
 
 })
